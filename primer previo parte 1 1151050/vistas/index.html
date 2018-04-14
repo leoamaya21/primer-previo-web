@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title> Laboratorio BD </title>
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+
+    
+    
+  
+
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+
+  </head>
+
+
+  <body>
+
+
+  <div class="nav banner">
+    <table>
+      <tr>
+        <td style="width: 100px; float: left;"><img class="bannerlogo" src="../img/icons/database-1.png"></td>
+        <td>
+        <div class="col-sm-12 col-xs-12">
+          <h4 style="color: white; font-style: bolder; margin: 0px;"> Laboratorio de consultas </h4>
+          <h6 style="color: white; font-style: bolder;"> estructurado </h6>
+        </div>
+        
+        </td>
+      </tr>
+    </table> 
+  </div>
+
+
+  <div class="content row">
+
+    <div class="col-lg-8 col-md-8">
+
+      <div class="box">
+        <h2 align="center">Laboratorio SQL</h2>
+        <p align="center">ingresa al sistema para poder hacer uso del laboratorio SQL</p>
+        <img src="../img/bd.jpg">
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4">
+
+      <div class="box">
+
+        <form action="/action_page.php">
+        <div class="form-group">
+          <label for="email">Usuario:</label>
+          <input type="email" class="form-control" id="user">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Contraseña:</label>
+          <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="form-check">
+        </div>
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+      </form>
+
+      </div>    
+
+    </div>
+        
+  </div>
+
+  <div class="box">
+
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#ejercicios" id="ejer">Ejercicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ejemplos" id="ejem">Ejemplos</a>
+        </li>
+      </ul>
+
+
+      <div id="contenedor" class="box">
+
+      </div>
+    
+  </div>
+
+  <div class="footer">
+
+    <div class="row">
+
+      <div align="center" class="col-md-6 col-lg-6 col-sm-12">
+        <h3>mi información</h3>
+        <div align="center">
+          <p>nombre: leonardo amaya</p>
+        <p>codigo: 1151050</p>
+        <p>carrera: ing sistemas</p>
+        <p>semestre: 2018-I</p>
+        </div>
+        
+      </div>
+      <div align="center" class="col-md-6 col-lg-6 col-sm-12">
+        <h3>conocimientos aprendidos:</h3>
+        <div align="center">
+          <p>html, css, javascript</p>
+        <p>bootstrap, jquery</p>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <p align="center"> Todos los derechos reservados - 2018</p>
+
+  </div>
+
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+    <script type="text/javascript">
+      $("#ejer").click(function(event){
+      $("#contenedor").load('ejercicios.html');
+      });   
+    </script>
+
+    <script type="text/javascript">
+      $("#ejem").click(function(event){
+      $("#contenedor").load('ejemplos.html');
+      });   
+    </script>
+
+
+
+
+  </body>
+</html>
