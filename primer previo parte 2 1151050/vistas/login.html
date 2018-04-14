@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Login | TeEnviamosLoQueSea</title>
+  <meta charset="utf-8">
+
+   <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/aspecto.css">
+
+</head>
+
+
+
+<body>
+
+    <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+  </nav>
+
+
+<div style="background-image: url(../img/logofondo.jpg); background-size: 10%; background-color: #1b3872">
+    <img class="logo-main" src="../img/logo.jpg">
+  </div>
+
+  <div class="loginBox " style="margin-bottom: 300px;">
+    <h5 class="subtitulopagina"> Inicia sesión </h5>
+    <form action="/action_page.php">
+      <div class="form-group">
+        <input type="email" class="form-control" id="email" placeholder="Usuario">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="pwd" placeholder="Contraseña">
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox"> Recordar mis datos</label>
+      </div>
+      <button type="submit" class="btn btn-primary btnLogin">Iniciar</button>
+    </form>
+  </div>
+    
+
+     <div class="foot" id="foot"></div>
+
+
+
+
+
+
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript">    
+      $("#nav").load('navbar.html');
+    </script>
+
+    <script type="text/javascript">    
+      $("#foot").load('footer.html');
+    </script>
+
+</body>
+</html>

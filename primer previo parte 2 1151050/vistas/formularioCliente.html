@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Registrar cliente | TeEnviamosLoQueSea</title>
+  <meta charset="utf-8">
+	<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/aspecto.css">
+
+
+</head>
+
+<body>
+	
+  
+   <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+  </nav>
+
+<div style="background-image: url(../img/logofondo.jpg); background-size: 10%; background-color: #1b3872">
+    <img class="logo-main" src="../img/logo.jpg">
+  </div>
+
+  <div class="loginBox">
+    <h5 class="subtitulopagina"> Registrar cliente </h5>
+    <form action="/action_page.php">
+      <div class="form-group">
+        <input type="text" class="form-control" id="nombres" placeholder="Nombres">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="apellidos" placeholder="Apellidos">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="cedula" placeholder="Cédula">
+      </div>	      
+
+      <div class="form-group">      	
+        <input type="email" class="form-control" id="email" placeholder="E-mail">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="pwd" placeholder="Contraseña">
+      </div>
+
+      <div class="row">
+      	<div class="radio col-xs-6" style="margin-top: 0px;">
+			  <label><input type="radio" name="optradio">Hombre</label>
+		</div>
+		<div class="radio col-xs-6" style="margin-top: 0px; ">
+			  <label><input type="radio" name="optradio">Mujer</label>
+		</div>
+      </div>
+
+      <div class="dropdown">
+		  <button id="city" style="width: 100%; margin-bottom: 10px;" class="btn btn-basic dropdown-toggle" type="button" data-toggle="dropdown">Sector de la ciudad
+		  <span class="caret"></span></button>
+		  <ul class="dropdown-menu">
+		  	<input class="form-control" id="myInput" type="text" placeholder="Search..">
+		    <li><a href="#">Ciudadela atalaya</a></li>
+		    <li><a href="#">Ciudadela la libertad</a></li>
+		    <li><a href="#">Comuna centro</a></li>
+		    <li><a href="#">Aeropuerto</a></li>
+		    <li><a href="#">Aniversario</a></li>
+		    <li><a href="#">Antonia santos</a></li>
+		    <li><a href="#">Belén</a></li>
+		    <li><a href="#">Belisario</a></li>
+		    <li><a href="#">Barrio blanco</a></li>
+		    <li><a href="#">Boconó</a></li>
+		    <li><a href="#">Etc ...</a></li>
+		  </ul>
+	  </div>
+
+	  <div class="form-group">
+		  <label for="comment">Observaciones:</label>
+		  <textarea class="form-control" rows="3" id="comment"></textarea>
+		</div>
+
+		<div class=""> 
+		    <br> 
+		    <div class=""> 
+		        <form role="form"> 
+		            <legend style="text-align: center;">Seleccionar foto</legend> 
+		            <div class="">
+		                <div class="form-group"> 
+		                    <div class="img-picker"></div>
+		                </div> 		                
+		            </div>		            
+		        </form> 
+		    </div> 
+		</div>
+
+
+      <button type="submit" class="btn btn-primary btnLogin">Registrar</button>
+    </form>
+  </div>
+
+
+  <div class="foot" id="foot"></div>
+
+
+
+
+
+
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript">    
+      $("#nav").load('navbar.html');
+    </script>
+
+    <script type="text/javascript">    
+      $("#foot").load('footer.html');
+    </script>
+
+
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".dropdown-menu li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+<script>
+	(function ( $ ) {
+ 
+    $.fn.imagePicker = function( options ) {
+        
+        // Define plugin options
+        var settings = $.extend({
+            // Input name attribute
+            name: "",
+            // Classes for styling the input
+            class: "form-control btn btn-default btn-block",
+            // Icon which displays in center of input
+            icon: "glyphicon glyphicon-plus"
+        }, options );
+        
+        // Create an input inside each matched element
+        return this.each(function() {
+            $(this).html(create_btn(this, settings));
+        });
+ 
+    };
+ 
+    // Private function for creating the input element
+    function create_btn(that, settings) {
+        // The input icon element
+        var picker_btn_icon = $('<i class="'+settings.icon+'"></i>');
+        
+        // The actual file input which stays hidden
+        var picker_btn_input = $('<input type="file" name="'+settings.name+'" />');
+        
+        // The actual element displayed
+        var picker_btn = $('<div class="'+settings.class+' img-upload-btn"></div>')
+            .append(picker_btn_icon)
+            .append(picker_btn_input);
+            
+        // File load listener
+        picker_btn_input.change(function() {
+            if ($(this).prop('files')[0]) {
+                // Use FileReader to get file
+                var reader = new FileReader();
+                
+                // Create a preview once image has loaded
+                reader.onload = function(e) {
+                    var preview = create_preview(that, e.target.result, settings);
+                    $(that).html(preview);
+                }
+                
+                // Load image
+                reader.readAsDataURL(picker_btn_input.prop('files')[0]);
+            }                
+        });
+
+        return picker_btn
+    };
+    
+    // Private function for creating a preview element
+    function create_preview(that, src, settings) {
+        
+            // The preview image
+            var picker_preview_image = $('<img src="'+src+'" class="img-responsive img-rounded" />');
+            
+            // The remove image button
+            var picker_preview_remove = $('<button class="btn btn-link"><small>Remove</small></button>');
+            
+            // The preview element
+            var picker_preview = $('<div class="text-center"></div>')
+                .append(picker_preview_image)
+                .append(picker_preview_remove);
+
+            // Remove image listener
+            picker_preview_remove.click(function() {
+                var btn = create_btn(that, settings);
+                $(that).html(btn);
+            });
+            
+            return picker_preview;
+    };
+    
+}( jQuery ));
+
+$(document).ready(function() {
+    $('.img-picker').imagePicker({name: 'images'});
+})
+</script>
+
+
+
+
+
+</body>
+</html>
